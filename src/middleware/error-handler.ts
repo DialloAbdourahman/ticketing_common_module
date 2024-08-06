@@ -1,5 +1,5 @@
-import { NextFunction, Request, Response } from 'express';
-import { CustomError } from '../errors/custom-error';
+import { NextFunction, Request, Response } from "express";
+import { CustomError } from "../errors/custom-error";
 
 export const errorHandler = (
   err: Error,
@@ -13,10 +13,11 @@ export const errorHandler = (
     });
   }
 
+  console.error("Unexpected error in middleware", err);
   res.status(400).send({
     errors: [
       {
-        message: 'Something went wrong',
+        message: "Something went wrong",
       },
     ],
   });

@@ -35,11 +35,5 @@ export abstract class Publisher<T extends Event> {
     console.log(
       `[*] Sent event with key: ${this.key} and exchange: ${this.exchange}. To exit press CTRL+C`
     );
-
-    setTimeout(() => {
-      this.conn.close();
-      console.log("Connection closed");
-      process.exit(0);
-    }, 500);
   }
 }

@@ -47,6 +47,10 @@ export abstract class Listener<T extends Event> {
       (msg) => {
         if (msg) {
           const parsedData = this.parseMessage(msg);
+          console.log(
+            `Received message with key: ${this.key}, exchange: ${this.exchange} and queue: ${this.queue}.`
+          );
+
           this.onMessage(parsedData, msg, channel);
         }
       },

@@ -4,6 +4,7 @@ export enum KEYS {
   ORDER_CREATED = "order.created",
   ORDER_CANCELLED = "order.cancelled",
   EXPIRATION_COMPLETE = "expiration.complete",
+  PAYMENT_CREATED = "payment.created",
 }
 
 export enum QUEUES {
